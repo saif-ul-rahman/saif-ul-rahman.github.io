@@ -1,0 +1,13 @@
+title: "Saif Ul Rehman"
+description: "AI Engineer building practical intelligent systems"
+markdown: kramdown
+permalink: /blog/:title/
+timezone: Asia/Karachi
+future: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

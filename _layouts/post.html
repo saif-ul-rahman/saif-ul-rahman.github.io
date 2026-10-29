@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<article class="post section-shell">
+
+  <!-- TOP LINE -->
+  <div class="post-topline">
+
+    <a
+      class="post-back"
+      href="{{ '/blog/' | relative_url }}"
+    >
+      ← Back to Blog
+    </a>
+
+    <span class="post-number">
+      {% if page.number %}
+        {{ page.number }}
+      {% else %}
+        ARTICLE
+      {% endif %}
+    </span>
+
+  </div>
+
+
+  <!-- TITLE -->
+  <header>
+
+    <h1>
+      {{ page.title }}<span class="title-dot">.</span>
+    </h1>
+
+    <div class="post-meta">
+
+      {% if page.date %}
+        <span>
+          {{ page.date | date: "%d.%m.%Y" }}
+        </span>
+      {% endif %}
+
+      {% if page.category %}
+        <span>
+          {{ page.category }}
+        </span>
+      {% endif %}
+
+      {% if page.read_time %}
+        <span>
+          {{ page.read_time }} min read
+        </span>
+      {% endif %}
+
+    </div>
+
+  </header>
+
+
+  <!-- LEAD -->
+  {% if page.description %}
+    <p class="post-lead">
+      {{ page.description }}
+    </p>
+  {% elsif page.excerpt %}
+    <p class="post-lead">
+      {{ page.excerpt | strip_html | truncate: 250 }}
+    </p>
+  {% endif %}
+
+
+  <!-- ARTICLE CONTENT -->
+  <div class="post-content">
+
+    {{ content }}
+
+  </div>
+
+
+  <!-- POST FOOTER -->
+  <footer class="post-footer">
+
+    <a
+      class="post-home-link"
+      href="{{ '/blog/' | relative_url }}"
+    >
+      ← All articles
+    </a>
+
+    <a
+      class="post-home-link"
+      href="{{ '/' | relative_url }}"
+    >
+      Home
+    </a>
+
+  </footer>
+
+</article>

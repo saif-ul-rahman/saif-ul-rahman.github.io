@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="{% if page.description %}{{ page.description }}{% else %}Saif Ul Rehman · AI Engineer{% endif %}"
+  >
+
+  <meta name="theme-color" content="#173A7A">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/style.css' | relative_url }}"
+  >
+
+  <title>
+    {% if page.title %}
+      {{ page.title }} · Saif Ul Rehman
+    {% else %}
+      Saif Ul Rehman · AI Engineer
+    {% endif %}
+  </title>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a
+      class="header-name"
+      href="{{ '/' | relative_url }}"
+      aria-label="Saif Ul Rehman, home"
+    >
+      SAIF UL REHMAN<span>.</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <i>MENU</i>
+    </button>
+
+    <nav
+      class="site-nav"
+      id="site-menu"
+      aria-label="Main navigation"
+    >
+
+      <a href="{{ '/' | relative_url }}">
+        Home
+      </a>
+
+      <a href="{{ '/#about' | relative_url }}">
+        About
+      </a>
+
+      <a href="{{ '/projects/' | relative_url }}">
+        Projects
+      </a>
+
+      <a href="{{ '/blog/' | relative_url }}">
+        Blog
+      </a>
+
+      <a
+        class="nav-contact"
+        href="{{ '/#contact' | relative_url }}"
+      >
+        Contact <span>↗</span>
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    {{ content }}
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer section-shell">
+
+    <a
+      class="footer-name"
+      href="{{ '/' | relative_url }}"
+    >
+      SAIF UL REHMAN
+      <span>/ AI Engineer</span>
+    </a>
+
+    <div>
+
+      <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://linkedin.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a href="mailto:hello@example.com">
+        Email
+      </a>
+
+    </div>
+
+    <p>
+      © {{ 'now' | date: '%Y' }} Saif Ul Rehman
+    </p>
+
+  </footer>
+
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+</body>
+</html>
