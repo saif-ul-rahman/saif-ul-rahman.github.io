@@ -1,4 +1,6 @@
 title: "Saif Ul Rehman"
+url : "https://saifaiengineer.github.io"
+baseurl : ""
 description: "AI Engineer building practical intelligent systems"
 markdown: kramdown
 permalink: /blog/:title/
